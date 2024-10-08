@@ -35,6 +35,9 @@ RUN rm -rf $HOME/tmp
 # Switch back to non-root user
 USER user
 
+# Add the policy_rag directory to the PYTHONPATH
+ENV PYTHONPATH=$PYTHONPATH:/home/user/app/policy_rag
+
 # Copy application files and set the command to run the app
 COPY . .
 CMD ["chainlit", "run", "app.py", "--port", "7860"]
