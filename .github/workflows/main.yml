@@ -14,12 +14,6 @@ jobs:
         with:
           fetch-depth: 0
           lfs: true
-
-      - name: Checkout tools repo
-        uses: actions/checkout@v4
-        with:
-          repository: ledgerW/policy-rag
-          path: policy-rag
       
       - name: Push to hub
         env:
