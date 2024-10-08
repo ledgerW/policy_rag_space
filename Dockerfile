@@ -11,7 +11,7 @@ RUN pip install -r requirements.txt
 RUN mkdir $HOME/tmp
 RUN mkdir $HOME/app/policy_rag
 RUN git clone https://github.com/ledgerW/policy-rag.git $HOME/tmp
-COPY --chown=user $HOME/tmp/policy-rag/policy_rag $HOME/app/policy_rag
+COPY --chown=user $HOME/tmp/policy_rag $HOME/app/policy_rag
 RUN rm -rf $HOME/tmp
 
 COPY . .
